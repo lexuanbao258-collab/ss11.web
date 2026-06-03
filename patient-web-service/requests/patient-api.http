@@ -1,0 +1,26 @@
+### Bài 1: thêm bệnh nhân bình thường -> INFO
+POST http://localhost:8080/api/patients
+Content-Type: application/json
+
+{
+  "name": "Nguyen Van An",
+  "age": 21
+}
+
+### Bài 1: tuổi quá cao -> WARN
+POST http://localhost:8080/api/patients
+Content-Type: application/json
+
+{
+  "name": "Tran Van B",
+  "age": 135
+}
+
+### Bài 2: tìm kiếm -> SQL DEBUG + TRACE trong service
+GET http://localhost:8080/api/patients/search?keyword=An
+
+### Lấy toàn bộ danh sách
+GET http://localhost:8080/api/patients
+
+### Bài 4: tạo lỗi chia cho 0 -> Client nhận JSON an toàn, file log có stack trace
+GET http://localhost:8080/api/patients/test-error?number=0

@@ -1,0 +1,12 @@
+.gradle/
+build/
+.idea/
+*.iml
+out/
+
+# Log files are generated while the application is running.
+logs/*.log
+logs/*.gz
+
+# Local environment configuration
+.env
